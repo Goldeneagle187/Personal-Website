@@ -1,0 +1,684 @@
+<!doctype html>
+<html ⚡ lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Samindra's Website</title>
+    <link rel="canonical" href="https://hisamindraray.netlify.app">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope&display=swap" rel="stylesheet">
+    <meta name="description" content="The humble digital abode of Samindra Ray containing all social media links and ways to contact me.">
+    <meta property="og:title" content="Samindra's Website">
+    <meta property="og:description" content="The humble digital abode of Samindra Ray containing all social media links and ways to contact me.">
+    <meta property="og:image" content="https://hisamindraray.netlify.app/assets/profile.webp">
+    <meta name="twitter:title" content="Samindra's Website">
+    <meta name="twitter:description" content="The humble digital abode of Samindra Ray containing all social media links and ways to contact me.">
+    <meta name="twitter:image" content="https://hisamindraray.netlify.app/assets/profile.webp">
+    <link rel="amphtml:instant-page" href="https://hisamindraray.netlify.app/amp.html">
+    <meta name="theme-color" content="#ffb94c">
+    <link rel="icon" type="image/svg+xml" href="/assets/favicons/favicon.svg" />
+    <link rel="shortcut icon" href="/assets/favicons/favicon.ico" />
+</head>
+<style amp-custom>
+/* Reset and Base Styles */
+:root {
+    --primary-color: #ff8800; /* Vivid but slightly muted Orange */
+  --text-color: #111111; /* Deep Black for strong contrast */
+  --bg-color: #BBDEFB;
+  --accent-color: #d90429; /* Strong but slightly desaturated Red */
+  --border-thickness: 4px;
+  --container-width: 1200px;
+  --pill-hover-offset: 4px;
+}
+
+::selection {
+    background-color: var(--text-color);
+    color: var(--bg-color);
+  }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+  scrollbar-width: thin;
+  scrollbar-color: var(--text-color) var(--bg-color);
+}
+
+a {
+    color: var(--primary-color);
+}
+
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  background: var(--bg-color);
+  padding: 0.5rem;
+}
+
+.header-content {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  background: var(--primary-color);
+  border: var(--border-thickness) solid var(--text-color);
+  padding: 1rem 2rem;
+  width: 90%;
+  box-shadow: var(--border-thickness) var(--border-thickness) 0 var(--text-color);
+}
+
+.header-title {
+  font-size: 2rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+}
+
+/* Notice Bar */
+.notice-bar {
+  background: var(--accent-color);
+  color: var(--bg-color);
+  padding: 1rem;
+  text-align: center;
+  border-top: var(--border-thickness) solid var(--text-color);
+  border-bottom: var(--border-thickness) solid var(--text-color);
+}
+
+.notice-link {
+  color: var(--bg-color);
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.2rem 0.5rem;
+  border: 2px solid var(--bg-color);
+}
+
+.notice-link:hover {
+  background: var(--bg-color);
+  color: var(--accent-color);
+}
+/* Main Content */
+.main-content {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.section {
+  margin: 4rem 0;
+  border: var(--border-thickness) solid var(--text-color);
+  padding: 2rem;
+  position: relative;
+  background: var(--bg-color);
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  border-bottom: var(--border-thickness) solid var(--text-color);
+  display: inline-block;
+  transform: rotate(-1deg);
+}
+
+/* Profile Section */
+.profile-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.image-wrapper {
+  border: var(--border-thickness) solid var(--text-color);
+  transform: rotate(-2deg);
+  overflow: hidden;
+}
+
+/* Updated Brutalist Pill Links */
+.pill-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.pill-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  color: white; 
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  text-decoration: none;
+  font-weight: bold;
+  position: relative;
+  border: var(--border-thickness) solid var(--text-color);
+  transition: transform 0.2s ease;
+}
+
+.pill-link::before {
+  content: '';
+  position: absolute;
+  top: var(--pill-hover-offset);
+  left: var(--pill-hover-offset);
+  width: 100%;
+  height: 100%;
+  background: var(--text-color);
+  z-index: -1;
+  transition: all 0.2s ease;
+}
+
+.pill-link:hover {
+  transform: translate(var(--pill-hover-offset), var(--pill-hover-offset));
+}
+
+.pill-link:hover::before {
+  transform: translate(calc(var(--pill-hover-offset) * -2), calc(var(--pill-hover-offset) * -2));
+}
+
+/* Skills Grid */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.skill-card {
+  border: var(--border-thickness) solid var(--text-color);
+  padding: 2rem;
+  text-align: center;
+  background: var(--bg-color);
+  position: relative;
+}
+
+.skill-card::after {
+  content: '';
+  position: absolute;
+  top: var(--pill-hover-offset);
+  left: var(--pill-hover-offset);
+  width: 100%;
+  height: 100%;
+  background: var(--primary-color);
+  z-index: -1;
+}
+
+/* Education Grid */
+.education-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.education-card {
+  border: var(--border-thickness) solid var(--text-color);
+  overflow: hidden;
+  position: relative;
+}
+
+.education-card::after {
+  content: '';
+  position: absolute;
+  top: var(--pill-hover-offset);
+  left: var(--pill-hover-offset);
+  width: 100%;
+  height: 100%;
+  background: var(--accent-color);
+  z-index: -1;
+}
+
+.education-details {
+  padding: 1.5rem;
+  background: var(--bg-color);
+}
+
+.education-period {
+  font-weight: bold;
+  color: var(--accent-color);
+  margin: 0.5rem 0;
+}
+
+/* Footer */
+.footer {
+  background: var(--text-color);
+  color: var(--bg-color);
+  padding: 2rem;
+  text-align: center;
+  margin-top: 4rem;
+  border-top: var(--border-thickness) solid var(--primary-color);
+}
+
+/* Animations */
+@keyframes glitch {
+  0% { transform: translate(0); }
+  20% { transform: translate(-2px, 2px); }
+  40% { transform: translate(-2px, -2px); }
+  60% { transform: translate(2px, 2px); }
+  80% { transform: translate(2px, -2px); }
+  100% { transform: translate(0); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  :root {
+    --border-thickness: 3px;
+    --pill-hover-offset: 3px;
+  }
+
+  .header-title {
+    font-size: 2rem;
+  }
+
+  .profile-container {
+    grid-template-columns: 1fr;
+  }
+
+  .section {
+    padding: 1rem;
+    margin: 2rem 0;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  
+  .pill-links,
+    .pill-links {
+      flex-direction: column;
+    }
+  
+    .pill-link,
+    .pill-link {
+      width: 100%;
+      justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --border-thickness: 2px;
+    --pill-hover-offset: 2px;
+  }
+
+  .header-title {
+    font-size: 1.5rem;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .education-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.pill-link.instagram {
+    background: #d38652; /* Muted Orange */
+}
+
+.pill-link.quora {
+    background: #d47a7a; /* Muted Coral */
+}
+
+.pill-link.linkedin {
+    background: #7a9dc7; /* Muted LinkedIn Blue */
+}
+
+.pill-link.twitter {
+    background: #245675; /* Muted Dark Blue */
+}
+
+.pill-link.github {
+    background: #3f2a66; /* Muted Deep Purple */
+}
+
+.pill-link.youtube {
+    background: #c10a67; /* Muted Reddish Pink */
+}
+
+.pill-link.whatsapp {
+    background: #1fa956; /* Muted Green */
+}
+
+.pill-link.telegram {
+    background: #4896c9; /* Muted Sky Blue */
+}
+
+.pill-link.signal {
+    background: #5d92d7; /* Muted Blue */
+}
+
+.pill-link.email {
+    background: #44c4a6; /* Muted Teal */
+}
+
+.pill-link.html {
+    background: #c44420; /* Muted Brick Red */
+}
+
+.pill-link.css {
+    background: #7434a2; /* Muted Violet */
+}
+
+.pill-link.feedback {
+    background: #428c93; /* Muted Cyan */
+}
+
+.pill-link.qr-code {
+    background: #cc062e; /* Muted Scarlet */
+}
+
+  .pill-link.amp {
+    background: #5a7ea7; /* Muted AMP Blue */
+}
+
+a, button, .theme-toggle, .scroll-top {
+    cursor: url('assets/cursors/cursor-hand-light.svg'), pointer;
+  }
+
+  body {
+    cursor: url('assets/cursors/cursor-light.svg'), auto;
+  }
+  
+</style>
+<body>
+        <header class="header">
+            <div class="header-content">
+                <h1 class="header-title">~<i>My Website</i></h1>
+            </div>
+        </header>
+    
+    <div class="notice-bar">
+        <p class="notice-text">
+            ⚡This AMP version of my website is made for consuming less data.
+            <a href="https://hisamindraray.netlify.app" class="notice-link">
+                Visit the main site
+            </a>
+        </p>
+    </div>
+
+    <main class="main-content">
+        <section class="section">
+            <div class="profile-container">
+                <div class="image-wrapper">
+                    <amp-img src="assets/profile-amp.webp" 
+                            alt="Eagle picture" 
+                            width="250"
+                            height="250"
+                            class="profile-photo"
+                            layout="responsive">
+                    </amp-img>
+                </div>
+                <div class="profile-info">
+                    <h2 class="section-title">Hi, I'm <strong>Samindra Ray</strong>
+                    </h2>
+                    <p>Welcome to my website!<br>
+                    I’m glad you’re here — take a look around and explore.<br>
+                    You’ll find links to my social profiles below.<br>
+                    Feel free to connect or reach out. Always open to meaningful conversations and collaborations.<br>
+                    </p>
+                    
+                    <div class="pill-links">
+                        <a href="https://www.instagram.com/hisamindraray/" target="_blank" class="pill-link instagram">
+                            <amp-img src="assets/icons/instagram-logo.svg" 
+                                    alt="Instagram logo" 
+                                    width="24" 
+                                    height="24"
+                                    layout="fixed">
+                            </amp-img>
+                            Instagram
+                        </a>
+                        <a href="https://x.com/R62536Ray" target="_blank" class="pill-link twitter">
+                            <amp-img src="assets/icons/twitterx-logo.svg" 
+                                    alt="Twitter logo" 
+                                    width="24" 
+                                    height="24"
+                                    layout="fixed">
+                            </amp-img>
+                            X (Twitter)
+                        </a>
+                        <a href="https://www.quora.com/profile/Samindra-Ray-2" target="_blank" class="pill-link quora">
+                            <amp-img src="assets/icons/quora-logo.svg" 
+                                    alt="Quora logo" 
+                                    width="24" 
+                                    height="24"
+                                    layout="fixed">
+                            </amp-img>
+                            Quora
+                        </a>
+                        <a href="https://github.com/Goldeneagle187" target="_blank" class="pill-link github">
+                            <amp-img src="assets/icons/github-logo.svg" 
+                                    alt="Github logo" 
+                                    width="24" 
+                                    height="24"
+                                    layout="fixed">
+                            </amp-img>
+                            Github
+                        </a>
+                        <a href="https://www.linkedin.com/in/samindra-ray-943975329/" target="_blank" class="pill-link linkedin">
+                            <amp-img src="assets/icons/linkedin-logo.svg" 
+                                    alt="Linkedin logo" 
+                                    width="24" 
+                                    height="24"
+                                    layout="fixed">
+                            </amp-img>
+                            Linkedin
+                        </a>
+                        <a href="https://www.youtube.com/@HiGoldenEagle" target="_blank" class="pill-link youtube">
+                            <amp-img src="assets/icons/youtube-logo.svg" 
+                                    alt="Youtube logo" 
+                                    width="24" 
+                                    height="24"
+                                    layout="fixed">
+                            </amp-img>
+                            Youtube
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Major Milestones of Life...</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <amp-img src="/assets/an-icons/school.webp" alt="School" width="128" height="128"></amp-img>
+                    </div>
+                    <h3>Passed 10th <br> (2022)</h3>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <amp-img src="/assets/an-icons/scientist.webp" alt="Man Scientist Medium-Light Skin Tone" width="125" height="125" /></amp-img>
+                    </div>
+                    <h3>Passed 12th Science Stream (2024)</h3>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <amp-img  src="/assets/an-icons/leafy-green.webp" alt="Leafy Green" width="125" height="125" />
+                        </amp-img>
+                    </div>
+                    <h3>Studying Botany Hons. w/ Zoology & Chemistry Minor</h3>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Academia</h2>
+            <div class="education-grid">
+                <div class="education-card">
+                    <amp-img src="assets/academia/dav-school.webp" 
+                            alt="School Name" 
+                            width="600" 
+                            height="400"
+                            layout="responsive"
+                            class="education-image">
+                    </amp-img>
+                    <div class="education-details">
+                        <h3>D.A.V Public School, Barrackpore</h3>
+                        <div class="education-period">2007 - 2008</div>
+                       <p>Began my academic journey here as a toddler. Don’t remember much beyond crayons and chaos, but I’m still grateful for the foundation it gave me.</p>
+                    </div>
+                </div>
+                <div class="education-card">
+                    <amp-img src="assets/academia/sm-school.webp" 
+                            alt="School Name" 
+                            width="600" 
+                            height="400"
+                            layout="responsive"
+                            class="education-image">
+                    </amp-img>
+                    <div class="education-details">
+                        <h3>St. Mary's School, Coochbehar</h3>
+                        <div class="education-period">2008 - 2015</div>
+                        <p>Where it all began. Spent my early childhood here — a time of curiosity, chaos, and carefree fun that laid the groundwork for everything that came after.</p>
+                    </div>
+                </div>
+                <div class="education-card">
+                    <amp-img src="assets/academia/sxi-school.webp" 
+                            alt="School Name" 
+                            width="600" 
+                            height="400"
+                            layout="responsive"
+                            class="education-image">
+                    </amp-img>
+                    <div class="education-details">
+                        <h3>St. Xavier's Institution, Ruiya</h3>
+                        <div class="education-period">2015 - 2024</div>
+                        <p>Spent the better part of my teenage years here — made memories, found incredible friends, and learned from some truly impactful mentors.<br>
+                             Grateful to everyone who made this chapter of life meaningful and unforgettable.</p>
+                    </div>
+                </div>
+                <div class="education-card">
+                    <amp-img src="assets/academia/cu-college.webp" 
+                            alt="College Name" 
+                            width="600" 
+                            height="400"
+                            layout="responsive"
+                            class="education-image">
+                    </amp-img>
+                    <div class="education-details">
+                        <h3>University of Calcutta (Asutosh College)</h3>
+                        <div class="education-period">2024 - ongoing</div>
+                        <p>Pursuing Major in Botany with Minors in Chemistry and Zoology.<br>
+                             Exploring the fascinating world of plants, animals, and molecules — one lecture, one lab, and one existential crisis at a time.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Contact Me</h2>
+            <p>WhatsApp and Telegram links are unavaliable currently due to privacy and security reasons.<br> 
+                Maybe added in future if Whatsapp ever decides to roll out usernames :)</p>
+            <div class="pill-links">
+                <a href="https://wa.me/yournumber" target="_blank" class="pill-link whatsapp">
+                    <amp-img src="assets/icons/whatsapp-logo.svg" 
+                            alt="WhatsApp logo" 
+                            width="24" 
+                            height="24"
+                            layout="fixed">
+                    </amp-img>
+                    WhatsApp
+                </a>
+                <a href="https://t.me/yourusername" target="_blank" class="pill-link telegram">
+                    <amp-img src="assets/icons/telegram-logo.svg" 
+                            alt="Telegram logo" 
+                            width="24" 
+                            height="24"
+                            layout="fixed">
+                    </amp-img>
+                    Telegram
+                </a>
+                <a href="https://signal.me/#eu/0sT1SlikLqs-L-PoW8beVXn2_05Lmwo5pewBa1_v0wiokVsJzZBCr5p5n0cneOYl" target="_blank" class="pill-link signal">
+                    <amp-img src="assets/icons/signal-logo.svg" 
+                            alt="Signal logo" 
+                            width="24" 
+                            height="24"
+                            layout="fixed">
+                    </amp-img>
+                    Signal
+                </a>
+                <a href="mailto:outreach.hush884@silomails.com?body=Hi%20Samindra%20Ray%2C%0A%0A%0AWarm%20Regards%2C%0A%5BYour%20Name%5D" target="_blank" class="pill-link email">
+                    <amp-img src="assets/icons/email-logo.svg" 
+                            alt="Gmail logo" 
+                            width="24" 
+                            height="24"
+                            layout="fixed">
+                    </amp-img>
+                    Email
+                </a>
+                <a href="mailto:outreach.hush884@silomails.com?subject=Bugfix%20Email&body=Hi%20Samindra%20Ray%2C%0AI%20found%20some%20bugs%2Fsecurity%20flaws%20in%20your%20website.%20Please%20fix%20urgently.%0A%0AUser%20Agent%3A%0AOperating%20System%3A%0ACPU%20Specs%3A%0A%0AWarm%20Regards%2C%0A%5BYour%20Name%5D" target="_blank" class="pill-link feedback">
+                    <amp-img src="assets/icons/feedback-logo.svg" 
+                            alt="Feedback logo" 
+                            width="24" 
+                            height="24"
+                            layout="fixed">
+                    </amp-img>
+                    Feedback
+                </a>
+            </div>
+        </section>
+        <section class="section">
+          <h2 class="section-title">Share This Website!</h2>
+              <div class="pill-links">
+                  <a href="https://api.whatsapp.com/send?text=Check%20out%20this%20super%20cool%20website%20https%3A%2F%2Fhisamindraray.netlify.app%2F" target="_blank" class="pill-link whatsapp"> 
+                    <amp-img src="assets/icons/whatsapp-logo.svg" 
+                            alt="Whatsapp logo" 
+                            width="24" 
+                            height="24"
+                            layout="fixed">
+                    </amp-img>
+                      Share via WhatsApp
+                  </a>
+                  <a href="https://t.me/share/url?url=https%3A%2F%2Fhisamindraray.netlify.app%2F&text=Check%20out%20this%20super%20cool%20website%20%E2%AC%86%EF%B8%8F" target="_blank" class="pill-link telegram"> 
+                    <amp-img src="assets/icons/telegram-logo.svg" 
+                            alt="Telegram logo" 
+                            width="24" 
+                            height="24"
+                            layout="fixed">
+                    </amp-img>
+                      Share via Telegram 
+                  </a>
+                  <a href="https://twitter.com/intent/tweet?text=Check%20out%20this%20amazing%20website" target="_blank" class="pill-link twitter"> 
+                    <amp-img src="assets/icons/twitterx-logo.svg" 
+                            alt="Twitter logo" 
+                            width="24" 
+                            height="24"
+                            layout="fixed">
+                    </amp-img>
+                      Tweet on Twitter/X
+                  </a>
+                  <a href="qrcode.html" target="_blank" class="pill-link qr-code"> 
+                    <amp-img src="assets/icons/QR-logo.svg" 
+                            alt="QR logo" 
+                            width="24" 
+                            height="24"
+                            layout="fixed">
+                    </amp-img>
+                      Get QR Code!
+                  </a>
+          </div>            
+      </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 Samindra Ray. Built with ❤️
+          <br> Source Code avaliable on my <a href="https://github.com/Goldeneagle187/PersonalWebsite">Github page</a>. Licensed under GPLv3. Attributions necessary. </p>
+    </footer>
+</body>
+</html>

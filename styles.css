@@ -1,0 +1,784 @@
+/*================================================================================
+  1. THEME & COLOR DEFINITIONS
+================================================================================*/
+
+/**
+ * Color variables are defined for light, dark, and system themes.
+ * This centralized approach allows for easy theme management and consistency.
+ */
+:root {
+  /* Light Theme Palette */
+  --primary-light: #805d00;
+  --on-primary-light: #ffffff;
+  --primary-container-light: #ffe08b;
+  --on-primary-container-light: #271900;
+  --surface-light: #eef1ff;
+  --on-surface-light: #1b1b21;
+  --surface-container-light: #e2e5f8;
+  --highlighter-light: #ffffff;
+  --glow-light: #3f51b5;
+  --racing-light: #271900;
+
+  /* Dark Theme Palette */
+  --primary-dark: #ffb94c;
+  --on-primary-dark: #422d00;
+  --primary-container-dark: #5f4200;
+  --on-primary-container-dark: #ffde9c;
+  --surface-dark: #131520;
+  --on-surface-dark: #e2e2e9;
+  --surface-container-dark: #1c1e2b;
+  --highlighter-dark: #131520;
+  --glow-dark: #3f51b5;
+  --racing-dark: #ffde9c;
+}
+
+/**
+ * Applies the selected theme based on the `data-theme` attribute on the root element.
+ */
+:root[data-theme="light"] {
+  --primary: var(--primary-light);
+  --on-primary: var(--on-primary-light);
+  --primary-container: var(--primary-container-light);
+  --on-primary-container: var(--on-primary-container-light);
+  --surface: var(--surface-light);
+  --on-surface: var(--on-surface-light);
+  --surface-container: var(--surface-container-light);
+  --highlighter: var(--highlighter-light);
+  --glow: var(--glow-light);
+  --racing: var(--racing-light);
+}
+
+:root[data-theme="dark"] {
+  --primary: var(--primary-dark);
+  --on-primary: var(--on-primary-dark);
+  --primary-container: var(--primary-container-dark);
+  --on-primary-container: var(--on-primary-container-dark);
+  --surface: var(--surface-dark);
+  --on-surface: var(--on-surface-dark);
+  --surface-container: var(--surface-container-dark);
+  --highlighter: var(--highlighter-dark);
+  --glow: var(--glow-dark);
+  --racing: var(--racing-dark);
+}
+
+/**
+ * Automatically applies the appropriate theme based on the user's
+ * operating system preference when `data-theme="system"`.
+ */
+@media (prefers-color-scheme: dark) {
+  :root[data-theme="system"] {
+    --primary: var(--primary-dark);
+    --on-primary: var(--on-primary-dark);
+    --primary-container: var(--primary-container-dark);
+    --on-primary-container: var(--on-primary-container-dark);
+    --surface: var(--surface-dark);
+    --on-surface: var(--on-surface-dark);
+    --surface-container: var(--surface-container-dark);
+    --highlighter: var(--highlighter-dark);
+    --glow: var(--glow-dark);
+    --racing: var(--racing-dark);
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root[data-theme="system"] {
+    --primary: var(--primary-light);
+    --on-primary: var(--on-primary-light);
+    --primary-container: var(--primary-container-light);
+    --on-primary-container: var(--on-primary-container-light);
+    --surface: var(--surface-light);
+    --on-surface: var(--on-surface-light);
+    --surface-container: var(--surface-container-light);
+    --highlighter: var(--highlighter-light);
+    --glow: var(--glow-light);
+    --racing: var(--racing-light);
+  }
+}
+
+/*================================================================================
+  2. BASE & RESET STYLES
+================================================================================*/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Manrope", "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  background-color: var(--surface);
+  color: var(--on-surface);
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+::selection {
+  background-color: var(--on-primary-container);
+  color: var(--on-primary);
+}
+
+/*================================================================================
+  3. LAYOUT & MAJOR COMPONENTS
+================================================================================*/
+
+/* Header */
+.header {
+  background: rgba(255, 255, 255, 0.3); 
+  padding: 1rem 2rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); 
+  position: sticky;
+  top: 1rem;
+  z-index: 1000;
+  backdrop-filter: blur(69px);
+  -webkit-backdrop-filter: blur(69px);
+  border-radius: 60px; /* Pill shape */
+  width: 1100px;
+  min-width: 60%;
+  max-width: 95%;
+  text-align: center;
+  margin: 0 auto; 
+  border: 3px solid var(--on-primary-container);
+}
+
+.header-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+/* Main Content Area */
+.main-content {
+  flex: 1; 
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  width: 100%;
+}
+
+/* General Section Styling */
+.section {
+  margin-bottom: 3rem;
+  padding: 2rem;
+  background-color: var(--surface-container);
+  border-radius: 12px;
+  border: 3px dotted var(--on-primary-container) !important;
+  background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%239C92AC' fill-opacity='0.17' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3Ccircle cx='13' cy='13' r='3'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+.section-title {
+  font-size: 1.75rem;
+  margin-bottom: 1.5rem;
+  color: var(--primary);
+}
+
+/* Footer */
+.footer {
+  background: rgba(255, 255, 255, 0.1); /* Match header transparency */
+  padding: 1rem 2rem;
+  text-align: center;
+  margin: 2rem auto 1rem; 
+  max-width: 95%;      
+  width: 1100px;       
+  min-width: 60%;
+  border-radius: 69px; 
+  border: 3px solid var(--on-primary-container); 
+  backdrop-filter: blur(69px);
+  -webkit-backdrop-filter: blur(69px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); 
+}
+
+
+/*================================================================================
+  4. SPECIFIC COMPONENTS & MODULES
+================================================================================*/
+
+/* Profile Section */
+.profile-container {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.image-wrapper {
+  position: relative;
+  width: 250px;
+  height: 250px;
+}
+
+.profile-photo {
+  width: 250px;
+  height: 250px;
+  position: relative;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  mask-image: url(assets/img.svg); /* Custom shape for the profile image */
+}
+
+/* SVG border for the profile photo */
+.border-line {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Allows clicks to pass through */
+}
+
+.border-line path {
+  fill: none;
+  stroke: var(--on-surface);
+  stroke-width: 5;
+  vector-effect: non-scaling-stroke; /* Prevents stroke from scaling with the element */
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  border: none;
+  background: var(--surface-container-dark);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.theme-toggle:hover {
+  background: var(--primary);
+}
+
+/* Pill-shaped Links */
+.pill-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.pill-link {
+  padding: 0.75rem 1.25rem;
+  border-radius: 12px;
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none !important;
+  transform: translateY(0);
+  transition: transform 0.2s ease;
+  background-color: var(--primary-container);
+  color: var(--highlighter-light) !important;
+  border: 3px solid var(--on-primary-container);
+  border-image-slice: 1;
+}
+
+.pill-link:hover {
+  transform: translateY(-2px); 
+}
+
+.pill-link svg {
+  width: 24px;
+  height: 24px;
+}
+
+/* Brand Color Overrides for Social/Tech Links */
+.pill-link.instagram {
+  background: linear-gradient(130deg, #f10856, #fd9b07, #f10856);
+}
+.pill-link.quora {
+  background: linear-gradient(130deg, #b80d07, #f38282, #b80d07);
+}
+.pill-link.discord {
+  background: linear-gradient(130deg, #5865f2, #7289da);
+}
+.pill-link.linkedin {
+  background: linear-gradient(130deg, #0a66c2, #8ab3e4, #0a66c2);
+}
+.pill-link.twitter {
+  background: linear-gradient(130deg, #14171a, #286391, #14171a);
+}
+.pill-link.github {
+  background: linear-gradient(130deg, #181717, #4f337e, #181717);
+}
+.pill-link.youtube {
+  background: linear-gradient(130deg, #a11d1d, #ec0b7c, #a11d1d);
+}
+.pill-link.whatsapp {
+  background: linear-gradient(130deg, #128c7e, #25d366, #128c7e);
+}
+.pill-link.telegram {
+  background: linear-gradient(130deg, #0088cc, #53afec, #0088cc);
+}
+.pill-link.signal {
+  background: linear-gradient(130deg, #3a8dff, #6da8fa, #3a8dff);
+}
+.pill-link.email {
+  background: linear-gradient(130deg, #4a90e2, #50e3c2, #4a90e2);
+}
+.pill-link.html {
+  background: linear-gradient(130deg, #e44d26 30%, #f16529);
+}
+.pill-link.css {
+  background: linear-gradient(130deg, #663399, #8a2be2, #663399);
+}
+.pill-link.js {
+  background: linear-gradient(130deg, #f4b400, #f7df1e, #f4b400);
+  color: #000000 !important;
+}
+.pill-link.feedback {
+  background: linear-gradient(130deg, #2c3e50, #4ca1af, #2c3e50);
+}
+.pill-link.qr-code {
+  background: linear-gradient(115deg, #000000, #ff073a, #000000);
+}
+
+/* Skills Section */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.skill-card {
+  background: var(--primary-container);
+  color: var(--on-primary-container);
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  transition: transform 0.2s;
+  border: 3px dotted var(--on-primary-container) !important;
+}
+
+.skill-card:hover {
+  transform: translateY(-2px);
+}
+
+.skill-icon {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Education Section */
+.education-grid {
+  display: grid;
+  gap: 2rem;
+}
+
+.education-card {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 1.5rem;
+  background: var(--surface);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: 3px dotted var(--on-primary-container) !important;
+}
+
+.education-image {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 0 30px var(--glow);
+}
+
+.education-details h3 {
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+.education-period {
+  font-size: 0.875rem;
+  color: var(--on-surface);
+  opacity: 0.8;
+  margin-bottom: 0.5rem;
+}
+
+/* General link styling */
+a {
+  color: var(--on-primary-container);
+}
+
+.site-refferer {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/*================================================================================
+  5. UTILITIES & HELPERS
+================================================================================*/
+
+/* Scroll to Top Button */
+.scroll-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 48px;
+  height: 48px;
+  border-radius: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.3s, transform 0.3s;
+  z-index: 100;
+  background-color: var(--primary-dark);
+}
+
+.scroll-top.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Custom Scrollbar Styling */
+body::-webkit-scrollbar {
+  background-color: var(--surface);
+  width: 16px;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: var(--surface);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--primary);
+  border-radius: 16px;
+  border: 4px solid var(--surface);
+}
+
+body::-webkit-scrollbar-button {
+  display: none;
+}
+
+/* Firefox-specific scrollbar styling */
+@-moz-document url-prefix() {
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary) var(--surface);
+  }
+}
+
+/* Custom Cursor Styles */
+[data-theme="light"] body {
+  cursor: url('assets/cursors/cursor-light.svg'), auto;
+}
+
+[data-theme="light"] .pill-link,
+[data-theme="light"] .theme-toggle,
+[data-theme="light"] .scroll-top {
+  cursor: url('assets/cursors/cursor-hand-light.svg'), pointer;
+}
+
+[data-theme="dark"] body {
+  cursor: url('assets/cursors/cursor-dark.svg'), auto;
+}
+
+[data-theme="dark"] .pill-link,
+[data-theme="dark"] .theme-toggle,
+[data-theme="dark"] .scroll-top {
+  cursor: url('assets/cursors/cursor-hand-dark.svg'), pointer;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    cursor: url('assets/cursors/cursor-dark.svg'), auto;
+  }
+  a, button, .theme-toggle, .scroll-top {
+    cursor: url('assets/cursors/cursor-hand-dark.svg'), pointer;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  body {
+    cursor: url('assets/cursors/cursor-light.svg'), auto;
+  }
+  a, button, .theme-toggle, .scroll-top {
+    cursor: url('assets/cursors/cursor-hand-light.svg'), pointer;
+  }
+}
+
+
+/* Lazy Loading Images */
+.lazy {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.lazy-loaded {
+  opacity: 1;
+}
+
+/* Unsupported/No-Script Fallback */
+.unsupported {
+  font-family: "Manrope", Helvetica, sans-serif;
+  color: var(--on-surface-dark);
+  background-color: var(--surface-dark);
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 10000;
+  padding: 2rem;
+}
+
+.unsupported-svg {
+  max-width: 80%;
+  max-height: 500px;
+  width: auto;
+  height: auto;
+  margin-bottom: 2rem;
+}
+
+.unsupported-text-main {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  color: var(--primary-dark);
+}
+
+.unsupported-text-sub {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.unsupported-button {
+  display: inline-block;
+  font-size: 1rem;
+  padding: 1rem 1.5rem;
+  background-color: var(--primary-dark);
+  color: var(--on-primary-container-light);
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.unsupported-button:hover {
+  background-color: var(--primary-light);
+  color: var(--primary-container-light);
+}
+
+
+/*================================================================================
+  6. RESPONSIVE & ADAPTIVE STYLES
+================================================================================*/
+
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    text-align: left !important;
+    gap: 0 !important;
+  }
+
+  .profile-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .image-wrapper,
+  .profile-photo {
+    width: 350px;
+    height: 350px;
+  }
+
+  .education-card {
+    grid-template-columns: 1fr;
+  }
+
+  .education-image {
+    height: 200px;
+  }
+
+  .pill-links {
+    flex-direction: column;
+  }
+
+  .pill-link {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .section {
+    padding: 1.5rem;
+  }
+
+  main {
+    padding-bottom: calc(64px + 1rem); /* Prevents content from hiding behind buttons */
+  }
+
+  .scroll-top {
+    bottom: 1rem;
+    right: 1rem;
+    width: 40px;
+    height: 40px;
+  }
+
+  .unsupported-svg {
+      max-width: 90%;
+      max-height: 70vh;
+  }
+}
+
+/* Accessibility: Reduce motion for users with vestibular disorders */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .pill-link:hover,
+  .skill-card:hover {
+    transform: none;
+  }
+}
+
+/*================================================================================
+  7. PRINT STYLES
+================================================================================*/
+
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 3cm 2.5cm;
+  }
+
+  * {
+    background: none !important;
+    color: #000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    transition: none !important;
+  }
+
+  body {
+    font-family: 'Manrope', sans-serif;
+    font-size: 11.5pt;
+    line-height: 1.6;
+    background: #fff !important;
+  }
+
+  /* Hide non-essential elements for a clean print layout */
+  header,
+  footer,
+  .theme-toggle,
+  .scroll-top,
+  .unsupported,
+  .image-wrapper,
+  .profile-photo,
+  .border-line,
+  .lazy {
+    display: none !important;
+  }
+
+  .profile-container {
+    display: block;
+    margin-bottom: 1.5cm;
+  }
+
+  .profile-info p {
+    font-size: 11pt;
+    margin-bottom: 1cm;
+  }
+
+  .section {
+    page-break-inside: avoid;
+    margin-bottom: 2.5cm;
+    padding: 0 !important;
+    border: none !important;
+  }
+
+  .section-title {
+    font-size: 17pt;
+    font-weight: bold;
+    border-bottom: 2px solid #000;
+    padding-bottom: 0.2cm;
+    margin-bottom: 1cm;
+  }
+
+  .pill-links {
+    margin: 0.5cm 0 1cm;
+  }
+
+  .pill-link {
+    display: block;
+    font-size: 11pt;
+    margin-bottom: 0.3cm;
+    text-decoration: none !important;
+  }
+
+  .pill-link img {
+    display: none !important;
+  }
+  
+  /* Show the URL for links when printing */
+  .pill-link::after,
+  a[href]:after {
+    content: " (" attr(href) ")";
+    font-size: 10pt;
+    color: #555;
+  }
+
+  .skills-grid,
+  .education-grid {
+    display: block;
+  }
+
+  .skill-card,
+  .education-card {
+    border: 1px solid #bbb !important;
+    padding: 1.2cm;
+    margin-bottom: 2cm;
+    page-break-inside: avoid;
+  }
+
+  .education-image {
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+    object-fit: cover !important;
+    margin-bottom: 0.5cm;
+  }
+
+  .education-details h3 {
+    font-size: 13.5pt;
+    margin-bottom: 0.2cm;
+  }
+
+  .education-period {
+    font-size: 10.5pt;
+    color: #444;
+    margin-bottom: 0.3cm;
+  }
+}

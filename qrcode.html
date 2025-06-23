@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Theme Colour Meta Tag -->
+        <meta name="theme-color" content="#ffb94c">
+        <!-- Favicon Code  -->
+        <link rel="icon" type="image/png" href="/assets/favicons/favicon-96x96.png" sizes="96x96" />
+        <link rel="icon" type="image/svg+xml" href="/assets/favicons/favicon.svg" />
+        <link rel="shortcut icon" href="/assets/favicons/favicon.ico" />
+    <title>QR Code!</title>
+    <style>
+        :root {
+            --primary-dark: #ffb94c;
+            --on-primary-dark: #422d00;
+            --primary-container-dark: #5f4200;
+            --on-primary-container-dark: #ffde9c;
+            --surface-dark: #131520;
+            --on-surface-dark: #e2e2e9;
+            --surface-container-dark: #1c1e2b;
+            --highlighter-dark: #131520;
+            --glow-dark: #3f51b5;
+            --racing-dark: #ffde9c;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scrollbar-width: none;
+        }
+
+        *::-webkit-scrollbar {
+            display: none;
+        }
+
+        ::selection {
+            color: var(--on-primary-container--dark);
+            background-color: var(--on-primary-dark);
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                opacity: 0.5;
+            }
+            50% {
+                transform: scale(1.05);
+                opacity: 0.8;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 0.5;
+            }
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            margin: 0;
+            background-color: var(--surface-dark);
+            color: var(--on-surface-dark);
+            overflow: hidden;
+            cursor: url('assets/cursors/cursor-dark.svg'), auto;
+        }
+
+        .container-wrapper {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            width: 100%;
+        }
+
+        .glow {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: var(--glow-dark);
+            filter: blur(30px);
+            border-radius: 24px;
+            animation: pulse 3s ease-in-out infinite;
+            z-index: 1;
+        }
+
+        .container {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            background: var(--highlighter-dark);
+            width: 100%;
+            max-width: 800px;
+            height: auto;
+            border: 3px solid var(--primary-dark);
+            border-radius: 24px;
+            padding: 32px 24px;
+            z-index: 2;
+            gap: 32px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+        }
+
+        .qr-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        img.qr-code {
+            width: 280px;
+            height: 280px;
+            border: 3px solid var(--primary-dark);
+            border-radius: 20px;
+            padding: 12px;
+            background-color: white;
+            box-shadow: 0 4px 16px rgba(255, 185, 76, 0.2);
+        }
+
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 24px;
+            width: 100%;
+        }
+
+        .step {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 12px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            transition: transform 0.2s ease;
+        }
+
+        .step:hover {
+            transform: translateY(-2px);
+        }
+
+        .step-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--primary-dark);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 8px;
+        }
+
+        .step-number {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--on-primary-dark);
+        }
+
+        .step-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .step-description {
+            font-size: 14px;
+            color: rgba(226, 226, 233, 0.8);
+            line-height: 1.4;
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                padding: 48px;
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .container {
+                max-width: 1200px;
+            }
+        }
+
+        .icon {
+            width: 24px;
+            height: 24px;
+            fill: none;
+            stroke: var(--on-primary-dark);
+            stroke-width: 2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-wrapper">
+        <div class="glow"></div>
+        <div class="container">
+            <div class="qr-section">
+                <img class="qr-code" src="assets/qr-code.png" alt="QR Code">
+            </div>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-icon">
+                        <span class="step-number">1</span>
+                    </div>
+                    <div class="step-content">
+                        <div class="step-title">Open Camera</div>
+                        <div class="step-description">Launch your phone's camera app, QR scanner or Google Lens</div>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-icon">
+                        <span class="step-number">2</span>
+                    </div>
+                    <div class="step-content">
+                        <div class="step-title">Point & Hold</div>
+                        <div class="step-description">Center the QR code in your camera view</div>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-icon">
+                        <span class="step-number">3</span>
+                    </div>
+                    <div class="step-content">
+                        <div class="step-title">Tap to Open</div>
+                        <div class="step-description">Click the "Open in Browser" or equivalent text to visit the link</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

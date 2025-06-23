@@ -1,0 +1,18 @@
+{
+  "name": "my-website",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "npm install && node optimize.js",
+    "start": "serve dist"
+  },
+  "dependencies": {
+    "clean-css": "^5.1.3",
+    "html-minifier-terser": "^5.1.1",
+    "terser": "^5.7.0",
+    "netlify-plugin-amp-server-side-rendering": "^1.0.0"
+  },
+  "devDependencies": {
+    "serve": "^14.0.1"
+  }
+}

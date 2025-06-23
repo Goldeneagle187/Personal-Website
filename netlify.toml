@@ -1,0 +1,42 @@
+#==================================================================
+# Netlify Build Settings
+#==================================================================
+# This configuration tells Netlify how to build and deploy your site.
+# It runs the optimization script and publishes the final 'dist' folder.
+#==================================================================
+[build]
+  command = "node optimize.js"
+  publish = "dist/"
+
+#==================================================================
+# Netlify Plugin Settings
+#==================================================================
+# The AMP plugin is used for server-side rendering of AMP pages.
+#==================================================================
+[[plugins]]
+  package = "netlify-plugin-amp-server-side-rendering"
+
+#==================================================================
+# HTTP Headers
+#==================================================================
+# These headers enhance security and functionality for your AMP page.
+#==================================================================
+[[headers]]
+  for = "/amp.html"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
+    AMP-Access-Control-Allow-Source-Origin = "*"
+    Access-Control-Expose-Headers = "AMP-Access-Control-Allow-Source-Origin"
+    Content-Security-Policy = "default-src 'none'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.ampproject.org; style-src 'self' 'unsafe-inline' https://cdn.ampproject.org https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https: http:; connect-src 'self'"
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+
+#==================================================================
+# Netlify Edge Functions
+#==================================================================
+# This defines an edge function to transform AMP pages on the fly.
+#==================================================================
+[[edge_functions]]
+  path = "/amp.html"
+  function = "transform-amp"
