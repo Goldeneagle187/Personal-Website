@@ -1,6 +1,6 @@
 # My Website
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/6112c5f4-09dd-4779-a152-bfeb25657989/deploy-status)](https://app.netlify.com/sites/hisamindraray/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/34ecbd6b-bb46-4939-8d2c-8d40447bb3ff/deploy-status)](https://app.netlify.com/projects/hisamindraray/deploys)
 
 Welcome to mysuper-fuckn awesome personal site! This repository contains the source code and content for my online static site where I showcase my work, skills, and interests.
 
@@ -18,8 +18,8 @@ Welcome to mysuper-fuckn awesome personal site! This repository contains the sou
 My personal website serves as a platform to:
 
 - Share my professional background, achievements, and projects.
-- Host my blog, where I share thoughts, tutorials, and experiences.
 - Provide an easy way to contact me or connect on social media.
+- Look cool 
 
 Visit the live site here: [Click here!](https://hisamindraray.netlify.app/) 
 
@@ -50,19 +50,17 @@ Visit the live site here: [Click here!](https://hisamindraray.netlify.app/)
    cd PersonalWebsite
    ```
 
-3. Open the `index.html` file in your browser:
-
-   ```pwsh
-   open index.html
-   ```
+3. Use VS Code extension Live Preview view (& edit) the files locally.<br>
+At this stage you should know what you're doing.
 
 ## Contributing
 
-I currently do not accept contributions. Feel free to visit other projects fo mine.
+Open a pull request, I'll review it for a possible merge to main branch. Thank you for your time and effort. 
 
 ## License
 
-This project is licensed under the [GNU GPL v3 License](LICENSE).
+This project is licensed under the [GNU GPL v3 License](LICENSE).<br>
+Attribution is welcome. 
 
 ---
 
