@@ -41,7 +41,13 @@ const ASSETS_TO_CACHE = [
     '/assets/cursors/cursor-hand-dark.svg',
     '/assets/cursors/cursor-light.svg',
     '/assets/cursors/cursor-hand-light.svg',
-    'assets/icons/arrow-up.svg'
+    'assets/icons/arrow-up.svg',
+    //Favicon
+    '/assets/favicon/apple-touch-icon.png',
+    '/assets/favicon/favicon.ico',
+    '/assets/favicon/favicon.svg',
+    '/favicon/favicon-96x96.png',
+    '/assets/favicon/site.webmanifest'
 ];
 
 /**
