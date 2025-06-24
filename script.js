@@ -275,3 +275,31 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+// Cacheing 
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/sw.js')
+    .then(registration => {
+      console.log('Service Worker registered');
+
+      registration.onupdatefound = () => {
+        const newWorker = registration.installing;
+        if (!newWorker) return;
+
+        newWorker.onstatechange = () => {
+          if (
+            newWorker.state === 'installed' &&
+            navigator.serviceWorker.controller
+          ) {
+            const shouldReload = confirm('A new version of the site is available. Refresh now?');
+            if (shouldReload) {
+              window.location.reload();
+            }
+          }
+        };
+      };
+    })
+    .catch(error => {
+      console.error('SW registration failed:', error);
+    });
+}

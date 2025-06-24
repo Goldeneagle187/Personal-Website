@@ -1,12 +1,14 @@
 
 // NOTE: Bumping this version number will trigger the service worker update
 // process and re-cache all assets.
-const CACHE_VERSION = 1;
+const CACHE_VERSION = 2;
 const CACHE_NAME = `my-website-cache-v${CACHE_VERSION}`;
 
 // A list of all the assets that should be cached on install.
 const ASSETS_TO_CACHE = [
     '/',
+    '/styles.css',
+    'script.js',
     '/assets/profile.webp',
     '/assets/img.svg',
     '/assets/noscript-error.svg',
@@ -43,6 +45,7 @@ const ASSETS_TO_CACHE = [
  * It opens a cache and adds all specified assets to it.
  */
 self.addEventListener('install', (event) => {
+    self.skipWaiting();
     event.waitUntil(
         caches.open(CACHE_NAME)
             .then((cache) => {
@@ -61,6 +64,7 @@ self.addEventListener('install', (event) => {
  * It cleans up old caches that are no longer needed.
  */
 self.addEventListener('activate', (event) => {
+    event.waitUntil(self.clients.claim());
     event.waitUntil(
         caches.keys().then((cacheNames) => {
             return Promise.all(

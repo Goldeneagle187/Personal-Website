@@ -31,6 +31,21 @@ Visit the live site here: [Click here!](https://hisamindraray.netlify.app/)
 - **Contact Form**: Easy way to reach out to me.
 - **Social Links**: Connect with me on platforms like LinkedIn, GitHub, etc.
 
+## Technical  Features
+- **Implemented Lazy Loading**: For fast loading times on poor network
+- **Custom Pull to Refresh**: For a more visually consistent look on mobile devices.<br> Unsupported in Safari/Firefox Browsers as of June 2025.
+- **Custom Scrollbar**: Custom scrollbars project uniqueness and visual consistency.
+- **Optimized Performance**: A generally good Lighthouse score
+- **Service Workers**: Less load on server for repeat clients
+- **SEO Optimisation**: Has Meta tags for most social platforms, SEO Optimised. 
+- **PWA Support**: webmanifest is added for users who wish to install it as an app.
+- **AMP**: Albeit controversial; AMP is added for those who prefer it. View it [here.](https://hisamindraray.netlify.app/amp)
+- **noscript**: ~~Users are redirected to a legacy site~~ *feature currently on to-do list*
+- **UI/UX**: Consistent UI/UX is used throughout the site. Optimized for both Desktop and Mobile devices.
+-  
+
+
+
 ## Technologies Used
 
 - **Frontend**: HTML, CSS, JavaScript.
