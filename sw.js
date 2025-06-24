@@ -1,7 +1,7 @@
 
 // NOTE: Bumping this version number will trigger the service worker update
 // process and re-cache all assets.
-const CACHE_VERSION = 2;
+const CACHE_VERSION = 3;
 const CACHE_NAME = `my-website-cache-v${CACHE_VERSION}`;
 
 // A list of all the assets that should be cached on install.
@@ -32,6 +32,11 @@ const ASSETS_TO_CACHE = [
     '/assets/an-icons/moon-emoji-am.webp',
     '/assets/an-icons/school.webp',
     '/assets/an-icons/scientist.webp',
+    //Academia
+    'assets/academia/cu-college.webp',
+    'assets/academia/dav-school.webp',
+    'assets/academia/sm-school.webp',
+    'assets/academia/sxi-school.webp',
     // Cursors
     '/assets/cursors/cursor-dark.svg',
     '/assets/cursors/cursor-hand-dark.svg',
