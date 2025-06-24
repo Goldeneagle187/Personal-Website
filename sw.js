@@ -1,7 +1,6 @@
-
 // NOTE: Bumping this version number will trigger the service worker update
 // process and re-cache all assets.
-const CACHE_VERSION = 3;
+const CACHE_VERSION = 4;
 const CACHE_NAME = `my-website-cache-v${CACHE_VERSION}`;
 
 // A list of all the assets that should be cached on install.
@@ -37,11 +36,12 @@ const ASSETS_TO_CACHE = [
     'assets/academia/dav-school.webp',
     'assets/academia/sm-school.webp',
     'assets/academia/sxi-school.webp',
-    // Cursors
+    // Others
     '/assets/cursors/cursor-dark.svg',
     '/assets/cursors/cursor-hand-dark.svg',
     '/assets/cursors/cursor-light.svg',
-    '/assets/cursors/cursor-hand-light.svg'
+    '/assets/cursors/cursor-hand-light.svg',
+    'assets/icons/arrow-up.svg'
 ];
 
 /**

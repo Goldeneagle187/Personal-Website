@@ -42,7 +42,7 @@ Visit the live site here: [Click here!](https://hisamindraray.netlify.app/)
 - **AMP**: Albeit controversial; AMP is added for those who prefer it. View it [here.](https://hisamindraray.netlify.app/amp)
 - **noscript**: ~~Users are redirected to a legacy site~~ *feature currently on to-do list*
 - **UI/UX**: Consistent UI/UX is used throughout the site. Optimized for both Desktop and Mobile devices.
--  
+-  **Netlify Server-side optimizations**: Optimizations like minifying CSS, JS occur on server side to further improve performance and loading times.
 
 
 
