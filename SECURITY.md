@@ -1,21 +1,5 @@
 # Security Policy
 
-## Supported Versions
+This shit is not needed for a static site. Anyways..
 
-Use this section to tell people about which versions of your project are
-currently being supported with security updates.
-
-| Version | Supported          |
-| ------- | ------------------ |
-| 5.1.x   | :white_check_mark: |
-| 5.0.x   | :x:                |
-| 4.0.x   | :white_check_mark: |
-| < 4.0   | :x:                |
-
-## Reporting a Vulnerability
-
-Use this section to tell people how to report a vulnerability.
-
-Tell them where to go, how often they can expect to get an update on a
-reported vulnerability, what to expect if the vulnerability is accepted or
-declined, etc.
+![Chin Tapak Dum Dum](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExa3prdTFhZDZ5eG53Zm4xNGt5Nnk0ZWQwbnJuMDJkcTMzcHUxY3AyaSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9dg/TiLNWnYuFD8ArhNJ19/giphy.gif)
