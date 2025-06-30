@@ -1,6 +1,6 @@
 # My Website
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/34ecbd6b-bb46-4939-8d2c-8d40447bb3ff/deploy-status)](https://app.netlify.com/projects/hisamindraray/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/34ecbd6b-bb46-4939-8d2c-8d40447bb3ff/deploy-status)](https://app.netlify.com/projects/hisray/deploys)
 
 Welcome to mysuper-fuckn awesome personal site! This repository contains the source code and content for my online static site where I showcase my work, skills, and interests.
 
@@ -21,7 +21,7 @@ My personal website serves as a platform to:
 - Provide an easy way to contact me or connect on social media.
 - Look cool 
 
-Visit the live site here: [Click here!](https://hisamindraray.netlify.app/) 
+Visit the live site here: [Click here!](https://hisray.netlify.app/) 
 
 ## Features
 
