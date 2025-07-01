@@ -1,11 +1,12 @@
 // NOTE: Bumping this version number will trigger the service worker update
 // process and re-cache all assets.
-const CACHE_VERSION = 4;
+const CACHE_VERSION = 5;
 const CACHE_NAME = `my-website-cache-v${CACHE_VERSION}`;
 
 // A list of all the assets that should be cached on install.
 const ASSETS_TO_CACHE = [
     '/',
+    '/index.html',
     '/styles.css',
     'script.js',
     '/assets/profile.webp',
