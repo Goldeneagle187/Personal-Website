@@ -39,7 +39,7 @@ Visit the live site here: [Click here!](https://hisray.netlify.app/)
 - **Service Workers**: Less load on server for repeat clients
 - **SEO Optimisation**: Has Meta tags for most social platforms, SEO Optimised. 
 - **PWA Support**: webmanifest is added for users who wish to install it as an app.
-- **AMP**: Albeit controversial; AMP is added for those who prefer it. View it [here.](https://hisamindraray.netlify.app/amp)
+- **AMP**: Albeit controversial; AMP is added for those who prefer it. View it [here.](https://hisray.netlify.app/amp)
 - **noscript**: ~~Users are redirected to a legacy site~~ *feature currently on to-do list*
 - **UI/UX**: Consistent UI/UX is used throughout the site. Optimized for both Desktop and Mobile devices.
 -  **Netlify Server-side optimizations**: Optimizations like minifying CSS, JS occur on server side to further improve performance and loading times.
