@@ -40,7 +40,8 @@ Visit the live site here: [Click here!](https://hisray.netlify.app/)
 - **SEO Optimisation**: Has Meta tags for most social platforms, SEO Optimised. 
 - **PWA Support**: webmanifest is added for users who wish to install it as an app.
 - **AMP**: Albeit controversial; AMP is added for those who prefer it. View it [here.](https://hisray.netlify.app/amp)
-- **noscript**: ~~Users are redirected to a legacy site~~ *feature currently on to-do list*
+> Brave and similar line of privacy focused browsers & extensions usually redirects to the canonical site instead of the AMP version. Read why [AMP is bad.](https://www.theverge.com/23711172/google-amp-accelerated-mobile-pages-search-publishers-lawsuit)
+- **noscript**: ~~Users are redirected to a legacy site~~ *feature currently on hold*
 - **UI/UX**: Consistent UI/UX is used throughout the site. Optimized for both Desktop and Mobile devices.
 -  **Netlify Server-side optimizations**: Optimizations like minifying CSS, JS occur on server side to further improve performance and loading times.
 
