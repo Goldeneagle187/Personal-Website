@@ -78,6 +78,9 @@ Open a pull request, I'll review it for a possible merge to main branch. Thank y
 - Gemini Pro 2.5
 - Freepik
 - yall.js
+- Microsoft Fluent 3D Icons
+- Google Animated Icons <br>
+
 & many more.....thanks to all of you.
 
 ## License
