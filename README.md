@@ -73,6 +73,13 @@ At this stage you should know what you're doing.
 
 Open a pull request, I'll review it for a possible merge to main branch. Thank you for your time and effort. 
 
+## Special Thanks to
+- Manrope Font Family 
+- Gemini Pro 2.5
+- Freepik
+- yall.js
+& many more.....thanks to all of you.
+
 ## License
 
 This project is licensed under the [GNU GPL v3 License](LICENSE).<br>
